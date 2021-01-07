@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100px;
+            height: 100px;
+            background: #f40;
+            /* 应用动画anil 动画时长2秒 1秒后开始播放*/
+            animation: anil 2s 1s infinite;
+        }
+        @keyframes anil {
+            50% {
+                width: 300px;
+                height: 300px;
+                background: #008c8c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

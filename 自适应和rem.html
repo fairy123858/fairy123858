@@ -1,0 +1,36 @@
+比如视口宽度是360，设计稿宽度是750，360/750*100=48 即1rem=48px,如果在下面设置2rem就会显示96px*96px
+<script>
+    (function(){
+        function setFont(){
+        var html = document.documentElement;//根元素
+        var designWidth = 750;//设计稿宽度
+        //html.clientWidth视口宽度
+        html.style.fontSize = (html.clientWidth / designWidth) * 100 + "px";//设置字体大小
+    }
+    setFont();
+    //设备尺寸变化时，重新设置根元素字体大小
+    window.onresize = setFont;
+    })();
+</script>
+<body>
+    <div style="width: 2rem; height: 2rem; background: red;"></div>
+</body>
+
+
+
+
+<!-- 重置样式 -->
+<link rel="stylesheet" href="./css/reset.css" />
+<!-- 全局样式 -->
+<link rel="stylesheet" href="./css/global.css" />
+<!-- 菜单 -->
+<link rel="stylesheet" href="./css/menu.css" />
+<!-- 弹出层 -->
+<link rel="stylesheet" href="./css/pop.css" />
+
+<!-- 通用API -->
+  <script src="./js/common.js"></script>
+  <!-- 菜单 -->
+  <script src="./js/menu.js"></script>
+  <!-- 弹出层 -->
+  <script src="./js/pop.js"></script>
